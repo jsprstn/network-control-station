@@ -1,0 +1,120 @@
+<!-- File: “template.txt” in /htdocs, writes to /htdocs/index.html -->
+
+<html>
+
+<meta http-equiv="refresh" content="1">
+
+<head>
+
+<title></title>
+
+</head>
+
+<body>
+
+<h1 style="text-align: center;"><span style="background-color: #33cccc;">BoxMaster 8000</h1>
+
+<h3 style="text-align: center;"><span style="background-color: chartreuse;"><strong>Network Control Station</strong></</h3><hr /><hr />
+
+<table style="width: 826px; border-color: #33cccc; background-color: chartreuse; margin-left: auto; margin-right: auto;" border="35" cellspacing="10" cellpadding="10">
+
+<tbody>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong>Power</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_power</td></tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong>Operator</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_operator</td></tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong>Line</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_line</td></tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong>Motor1</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_motor1</td></tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong>Motor2</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_motor2</td></tr>
+
+<tr style="height: 18px;"><td style="width: 104px; text-align: center; height:18px;"><strong># Widgets In Current Box</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_widgets</td></tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong># Boxes On Current Pallet</strong></strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_boxes</td></tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><strong>Pallets Shipped By Operator (Shift)</strong></td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">_pallets</td>
+
+</tr>
+
+</tr>
+
+<tr style="height: 18px;">
+
+<td style="width: 104px; text-align: center; height: 18px;"><form action=""method="post">
+
+<button name="click1" class="click1"><span style="background-color:yellow;"><strong>New Pallet</strong></button>
+
+</form>
+
+</td>
+
+<td style="text-align: center; width: 197.5px; height: 18px;">
+
+<form action="" method="post">
+
+<button name="click2" class="click2"><span style="color: white;"><span style="background-color: red;"><strong>EMERGENCY LOCKOUT</strong></button>
+
+</form>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<hr /><hr />
+
+<h3 style="text-align: center;"></h3>
+
+</body>
+
+</html>
+
+<?php if(isset($_POST['click1']))
+{
+$filename = "serverstream.txt";
+file_put_contents($filename, "1");
+}
+?>
+
+<?php
+if(isset($_POST['click2']))
+{
+$filename = "serverstream.txt";
+file_put_contents($filename, "2");
+}
+?>
